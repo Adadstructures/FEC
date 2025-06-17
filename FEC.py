@@ -2,14 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+from catboost import CatBoostRegressor
 from scipy.optimize import differential_evolution
 import shap
 import matplotlib.pyplot as plt
 import os
 
 # Load the saved model and scaler
-with open('catboost_model.cbm', 'rb') as model_file:
-    model = pickle.load(model_file)
+model = CatBoostRegressor()
+model.load_model('catboost_model.cbm')
 with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
