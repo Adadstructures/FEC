@@ -1,0 +1,11 @@
+streamlit
+numpy
+optuna
+pickle-mixin
+catboost
+shap
+matplotlib
+scikit-learn
+pandas
+joblib
+scipy
