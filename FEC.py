@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 import os
 
 # Load the saved model and scaler
-with open('bond_strength_model.pkl', 'rb') as model_file:
+with open('catboost_model.cbm', 'rb') as model_file:
     model = pickle.load(model_file)
-with open('bs_scaler_X.pkl', 'rb') as scaler_file:
+with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
 # Feature configuration
